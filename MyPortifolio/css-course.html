@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Course | Skill Byte</title>
+ <link rel="icon" type="image/png" href="my.png">
+<style>
+
+/* ================= GENERAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#111;
+}
+
+
+/* ================= HERO ================= */
+
+.course-hero{
+
+    min-height:700px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:70px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111 0%,
+            #111 55%,
+            #f5f5f5 55%,
+            #fff 100%
+        );
+}
+
+
+.hero-container{
+
+    width:100%;
+    max-width:1150px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:50px;
+}
+
+
+/* ================= LEFT CONTENT ================= */
+
+.hero-content{
+
+    max-width:700px;
+
+    color:#fff;
+}
+
+
+.course-badge{
+
+    display:inline-block;
+
+    padding:9px 18px;
+
+    border:1px solid #fff;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+
+.hero-content h1{
+
+    font-size:clamp(42px,6vw,72px);
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    margin-bottom:22px;
+}
+
+
+.hero-content h1 span{
+
+    color:#aaa;
+}
+
+
+.long-description{
+
+    color:#ddd;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+    max-width:760px;
+}
+
+
+/* ================= GOOGLE MEET ================= */
+
+.meet-box{
+
+    width:100%;
+    max-width:520px;
+
+    padding:25px;
+
+    background:#fff;
+    color:#111;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    border:1px solid #ddd;
+
+    text-align:center;
+}
+
+
+.meet-icon{
+
+    width:55px;
+    height:55px;
+
+    margin:0 auto 12px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#111;
+    color:#fff;
+
+    border-radius:15px;
+
+    font-size:25px;
+}
+
+
+.meet-box h3{
+
+    font-size:21px;
+
+    margin-bottom:8px;
+}
+
+
+.meet-description{
+
+    color:#666;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+}
+
+
+.meet-box input{
+
+    width:100%;
+
+    padding:14px 15px;
+
+    border:1px solid #ccc;
+
+    border-radius:9px;
+
+    outline:none;
+
+    font-size:14px;
+
+    margin-bottom:12px;
+}
+
+
+.meet-box input:focus{
+
+    border-color:#111;
+
+    box-shadow:
+        0 0 0 3px rgba(0,0,0,.08);
+}
+
+
+.join-meet-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:9px;
+
+    background:#111;
+    color:#fff;
+
+    font-size:15px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+
+.join-meet-btn:hover{
+
+    background:#333;
+
+    transform:translateY(-2px);
+}
+
+
+.meet-error{
+
+    color:#d00000;
+
+    font-size:12px;
+
+    margin-top:10px;
+}
+
+
+/* ================= RIGHT CARD ================= */
+
+.hero-card{
+
+    width:330px;
+    min-width:280px;
+
+    background:#fff;
+    color:#111;
+
+    padding:35px 30px;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    animation:
+        floatCard 4s ease-in-out infinite;
+}
+
+
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+
+.course-icon{
+
+    width:85px;
+    height:85px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:#111;
+    color:#fff;
+
+    font-size:40px;
+}
+
+
+.hero-card h2{
+
+    font-size:25px;
+
+    margin-bottom:12px;
+}
+
+
+.hero-card > p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+    margin-bottom:22px;
+}
+
+
+/* ================= DETAILS ================= */
+
+.course-details{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+}
+
+
+.detail{
+
+    background:#f5f5f5;
+
+    padding:12px 8px;
+
+    border-radius:10px;
+
+    transition:.3s ease;
+}
+
+
+.detail:hover{
+
+    background:#111;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+}
+
+
+.detail strong{
+
+    display:block;
+
+    font-size:15px;
+
+    margin-bottom:4px;
+}
+
+
+.detail span{
+
+    color:#777;
+
+    font-size:12px;
+}
+
+
+.detail:hover span{
+
+    color:#ccc;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .course-hero{
+
+        padding:55px 20px;
+    }
+
+
+    .hero-container{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+
+    .meet-box{
+
+        margin:0 auto;
+    }
+
+
+    .hero-card{
+
+        width:100%;
+
+        max-width:380px;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .hero-content h1{
+
+        font-size:40px;
+    }
+
+
+    .long-description{
+
+        font-size:15px;
+
+        line-height:1.8;
+    }
+
+
+    .meet-box{
+
+        padding:20px 17px;
+    }
+
+
+    .hero-card{
+
+        padding:28px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CSS COURSE HERO
+===================================================== -->
+
+<section class="course-hero">
+
+    <div class="hero-container">
+
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <div class="hero-content">
+
+
+            <div class="course-badge">
+
+                SKILL BYTE • PROFESSIONAL COURSE
+
+            </div>
+
+
+            <h1>
+
+                CSS
+
+                <span>Course</span>
+
+            </h1>
+
+
+            <p class="long-description">
+
+                The Skill Byte CSS Course is designed for
+                beginners who want to learn how to create
+                beautiful and modern websites using CSS.
+
+                <br><br>
+
+                In this course, you will learn how CSS works
+                with HTML and how to control colors, fonts,
+                backgrounds, borders, spacing and layouts.
+
+                <br><br>
+
+                You will also learn important CSS concepts
+                including selectors, the box model, Flexbox,
+                Grid, positioning and responsive design.
+
+                <br><br>
+
+                The course focuses strongly on practical
+                learning. You will practice CSS through
+                exercises, assignments and real website
+                styling projects.
+
+                <br><br>
+
+                Live Google Meet classes will help you learn
+                directly and ask questions during <br> the course.
+
+                <br><br>
+
+                By completing this course, you can build a
+                strong foundation in <br> CSS and create
+                professional-looking web pages.
+
+            </p>
+
+
+            <!-- GOOGLE MEET -->
+
+            <div class="meet-box">
+
+                <div class="meet-icon">
+                    🎥
+                </div>
+
+
+                <h3>
+                    Join Live Google Meet
+                </h3>
+
+
+                <p class="meet-description">
+
+                    Paste your Google Meet link below to join
+                    the live CSS class.
+
+                </p>
+
+
+                <input
+                    type="url"
+                    id="meetLink"
+                    placeholder="Paste Google Meet link here..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    type="button"
+                    onclick="joinGoogleMeet()"
+                    class="join-meet-btn"
+                >
+
+                    Join Google Meet →
+
+                </button>
+
+
+                <p
+                    id="meetError"
+                    class="meet-error"
+                ></p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <div class="hero-card">
+
+
+            <div class="course-icon">
+
+                🎨
+
+            </div>
+
+
+            <h2>
+
+                CSS Course
+
+            </h2>
+
+
+            <p>
+
+                Learn • Design • Style • Build
+
+            </p>
+
+
+            <div class="course-details">
+
+
+                <div class="detail">
+
+                    <strong>📚</strong>
+
+                    <span>
+                        Course Notes
+                    </span>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>💻</strong>
+
+                    <span>
+                        Practical Lab
+                    </span>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>🎥</strong>
+
+                    <span>
+                        Live Class
+                    </span>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <strong>📜</strong>
+
+                    <span>
+                        Certificate
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= GOOGLE MEET SCRIPT ================= -->
+
+<script>
+
+function joinGoogleMeet(){
+
+    const link =
+        document.getElementById("meetLink")
+        .value
+        .trim();
+
+    const error =
+        document.getElementById("meetError");
+
+    error.textContent = "";
+
+
+    if(link === ""){
+
+        error.textContent =
+            "Please paste a Google Meet link.";
+
+        return;
+    }
+
+
+    try{
+
+        const url = new URL(link);
+
+
+        if(
+            url.protocol !== "https:" ||
+            url.hostname !== "meet.google.com"
+        ){
+
+            error.textContent =
+                "Please enter a valid Google Meet link.";
+
+            return;
+        }
+
+
+        window.open(
+            url.href,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    }
+
+
+    catch(errorObject){
+
+        error.textContent =
+            "Please enter a valid Google Meet link.";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
